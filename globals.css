@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 142 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 163 83% 57%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 37 100% 64%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 15 93% 62%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* eZunder Custom Properties */
+    --neon-green: #39FF14;
+    --forest-teal: #26FFAE; 
+    --dark-forest: #001E2F;
+    --charcoal-black: #121212;
+    --ember-orange: #FF6F3D;
+    --warm-amber: #FFB347;
+    --smoke-gray: #576975;
+    --pure-white: #FFFFFF;
+  }
+
+  .dark {
+    --background: 198 100% 9%;
+    --foreground: 210 40% 98%;
+
+    --card: 192 100% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 192 100% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 100% 50%;
+    --primary-foreground: 192 100% 5%;
+
+    --secondary: 163 83% 57%;
+    --secondary-foreground: 192 100% 5%;
+
+    --muted: 198 100% 5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 37 100% 64%;
+    --accent-foreground: 192 100% 5%;
+
+    --destructive: 15 93% 62%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 198 100% 15%;
+    --input: 198 100% 15%;
+    --ring: 142 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold;
+  }
+
+  h1 {
+    @apply text-2xl md:text-3xl lg:text-4xl leading-tight;
+  }
+
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl leading-tight;
+  }
+
+  h3 {
+    @apply text-lg md:text-xl lg:text-2xl leading-snug;
+  }
+
+  /* Neon effects */
+  .neon-text {
+    @apply text-neon-green;
+    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 15px #39FF14;
+  }
+
+  .forest-text {
+    @apply text-forest-teal;
+    text-shadow: 0 0 5px #26FFAE, 0 0 10px #26FFAE;
+  }
+
+  .ember-text {
+    @apply text-ember-orange;
+    text-shadow: 0 0 5px #FF6F3D, 0 0 10px #FF6F3D;
+  }
+
+  .amber-text {
+    @apply text-warm-amber;
+    text-shadow: 0 0 5px #FFB347, 0 0 10px #FFB347;
+  }
+
+  /* Button hover effects */
+  .btn {
+    @apply relative inline-flex items-center justify-center px-6 py-2 overflow-hidden text-sm font-medium transition-all duration-300 ease-out rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neon-green;
+  }
+
+  .btn--primary {
+    @apply bg-neon-green text-dark-forest hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(57,255,20,0.5)];
+  }
+
+  .btn--secondary {
+    @apply bg-forest-teal text-dark-forest hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(38,255,174,0.5)];
+  }
+
+  .btn--ember {
+    @apply bg-ember-orange text-pure-white hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(255,111,61,0.5)];
+  }
+
+  /* Three panel layout for editor */
+  .editor-layout {
+    @apply grid h-[calc(100vh-4rem)] w-full;
+    grid-template-columns: 280px 1fr 320px;
+    grid-template-rows: 1fr;
+  }
+
+  @media (max-width: 1199px) {
+    .editor-layout {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .editor-panel-active {
+      @apply fixed inset-0 z-50 bg-background;
+    }
+  }
+
+  /* Tree structure navigation */
+  .tree-nav {
+    @apply space-y-1;
+  }
+
+  .tree-nav-item {
+    @apply flex items-center px-3 py-2 text-sm rounded-md cursor-pointer hover:bg-forest-teal hover:bg-opacity-20;
+  }
+
+  .tree-nav-item.active {
+    @apply bg-forest-teal bg-opacity-20 text-forest-teal;
+  }
+
+  .tree-nav-item-children {
+    @apply pl-6 mt-1 space-y-1 border-l-2 border-forest-teal border-opacity-30;
+  }
+
+  /* Focus mode styles */
+  .focus-mode {
+    @apply max-w-3xl mx-auto p-8 rounded-lg bg-opacity-80 backdrop-blur-sm;
+    box-shadow: 0 0 30px rgba(255, 179, 71, 0.2);
+  }
+
+  /* Forest-inspired loading spinner */
+  .forest-spinner {
+    @apply relative w-16 h-16;
+  }
+
+  .forest-spinner:before {
+    content: "";
+    @apply absolute inset-0 rounded-full border-4 border-forest-teal border-opacity-20;
+  }
+
+  .forest-spinner:after {
+    content: "";
+    @apply absolute inset-0 rounded-full border-4 border-t-forest-teal border-opacity-80;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Ember particle animation for loading */
+  .ember-particle {
+    @apply absolute w-2 h-2 bg-ember-orange rounded-full opacity-0;
+    animation: ember-float 2s ease-in-out infinite;
+  }
+
+  .ember-particle:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .ember-particle:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .ember-particle:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  .ember-particle:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes ember-float {
+    0% {
+      transform: translateY(0) scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-20px) scale(0.2);
+      opacity: 0;
+    }
+  }
+}

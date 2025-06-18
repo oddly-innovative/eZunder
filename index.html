@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eZunder | AI-Powered eBook Formatting Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- App Container -->
+  <div class="app-container">
+    <!-- Header Navigation -->
+    <header class="app-header">
+      <div class="logo">
+        <h1><span class="neon-text">e</span>Zunder</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#features" data-nav="features">Features</a></li>
+          <li><a href="#pricing" data-nav="pricing">Pricing</a></li>
+          <li><a href="#about" data-nav="about">About</a></li>
+          <li class="user-section hidden" id="user-section">
+            <button class="profile-button" id="profile-button">
+              <span class="user-avatar">DU</span>
+              <span class="user-name">Demo User</span>
+            </button>
+            <div class="dropdown-menu hidden" id="user-dropdown">
+              <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#" id="logout-button">Log out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="auth-buttons" id="auth-buttons">
+        <button class="btn btn--secondary" id="login-button">Log in</button>
+        <button class="btn btn--primary" id="signup-button">Sign up</button>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Landing Page -->
+      <section class="page landing-page" id="landing-page">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title">Transform your writing into <span class="highlight-text">stunning eBooks</span> with AI</h1>
+            <p class="hero-subtitle">eZunder uses AI to analyze your manuscript and create professionally formatted eBooks optimized for any platform.</p>
+            <div class="hero-cta">
+              <button class="btn btn--primary btn--lg glow-effect" id="get-started-button">
+                <span class="btn-text">Light Your Fire</span>
+                <span class="ember-particles"></span>
+              </button>
+              <button class="btn btn--secondary btn--lg" id="learn-more-button">Explore the Forest</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="book-preview">
+              <div class="book-cover">
+                <div class="book-spine"></div>
+                <div class="book-front">
+                  <h3>The Digital Forest</h3>
+                  <p>by Sarah Chen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-section" id="features">
+          <h2 class="section-title">Features that <span class="highlight-text">illuminate</span> your content</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon ai-icon"></div>
+              <h3>AI-Powered Analysis</h3>
+              <p>Our AI analyzes your text to suggest optimal typography, layout, and formatting based on your genre and content.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon editor-icon"></div>
+              <h3>Intuitive Editor</h3>
+              <p>Our distraction-free three-panel editor lets you write, organize, and format your book in one seamless experience.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon export-icon"></div>
+              <h3>Multi-Format Export</h3>
+              <p>Export your book in EPUB, MOBI/KF8, PDF, and HTML formats, perfectly optimized for every platform.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon collab-icon"></div>
+              <h3>Real-time Collaboration</h3>
+              <p>Work with editors and collaborators in real-time with our ember-highlighting and comment system.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-section" id="pricing">
+          <h2 class="section-title">Choose your <span class="highlight-text">path</span> through the forest</h2>
+          <div class="pricing-tiers">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Sapling</h3>
+                <div class="pricing-cost">
+                  <span class="currency">$</span>
+                  <span class="amount">0</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li>Basic formatting tools</li>
+                  <li>EPUB export only</li>
+                  <li>1 active project</li>
+                  <li>Community support</li>
+                </ul>
+              </div>
+              <button class="btn btn--secondary btn--full-width">Start Growing</button>
+            </div>
+            <div class="pricing-card featured">
+              <div class="pricing-badge">Most Popular</div>
+              <div class="pricing-header">
+                <h3>Evergreen</h3>
+                <div class="pricing-cost">
+                  <span class="currency">$</span>
+                  <span class="amount">12</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li>Advanced AI formatting</li>
+                  <li>All export formats</li>
+                  <li>10 active projects</li>
+                  <li>Priority support</li>
+                  <li>Typography recommendations</li>
+                </ul>
+              </div>
+              <button class="btn btn--primary btn--full-width glow-effect">Flourish Now</button>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Ancient Oak</h3>
+                <div class="pricing-cost">
+                  <span class="currency">$</span>
+                  <span class="amount">29</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li>Everything in Evergreen</li>
+                  <li>Unlimited projects</li>
+                  <li>Team collaboration</li>
+                  <li>Custom AI training</li>
+                  <li>White-label exports</li>
+                </ul>
+              </div>
+              <button class="btn btn--secondary btn--full-width">Become Mighty</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Authentication Page -->
+      <section class="page auth-page hidden" id="auth-page">
+        <div class="auth-container">
+          <div class="auth-visual">
+            <div class="forest-background"></div>
+          </div>
+          <div class="auth-forms">
+            <div class="auth-header">
+              <div class="logo">
+                <h1><span class="neon-text">e</span>Zunder</h1>
+              </div>
+              <div class="auth-tabs">
+                <button class="auth-tab active" id="login-tab">Log In</button>
+                <button class="auth-tab" id="signup-tab">Sign Up</button>
+              </div>
+            </div>
+            
+            <!-- Login Form -->
+            <form class="auth-form login-form" id="login-form">
+              <div class="form-group">
+                <label for="login-email" class="form-label">Email</label>
+                <input type="email" id="login-email" class="form-control" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password" class="form-label">Password</label>
+                <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+              </div>
+              <div class="form-group">
+                <a href="#" class="forgot-password">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full-width">Log In</button>
+              <div class="social-login">
+                <p>Or continue with</p>
+                <button type="button" class="btn btn--outline btn--full-width google-auth">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 12 L16 12 M12 8 L12 16"></path>
+                  </svg>
+                  Continue with Google
+                </button>
+              </div>
+            </form>
+            
+            <!-- Signup Form -->
+            <form class="auth-form signup-form hidden" id="signup-form">
+              <div class="form-group">
+                <label for="signup-name" class="form-label">Full Name</label>
+                <input type="text" id="signup-name" class="form-control" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="signup-email" class="form-label">Email</label>
+                <input type="email" id="signup-email" class="form-control" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="signup-password" class="form-label">Password</label>
+                <input type="password" id="signup-password" class="form-control" placeholder="••••••••" required>
+              </div>
+              <div class="form-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" required>
+                  <span class="checkmark"></span>
+                  I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                </label>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+              <div class="social-login">
+                <p>Or continue with</p>
+                <button type="button" class="btn btn--outline btn--full-width google-auth">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 12 L16 12 M12 8 L12 16"></path>
+                  </svg>
+                  Continue with Google
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Onboarding Tutorial -->
+      <section class="page onboarding-page hidden" id="onboarding-page">
+        <div class="onboarding-container">
+          <div class="onboarding-header">
+            <div class="logo">
+              <h1><span class="neon-text">e</span>Zunder</h1>
+            </div>
+            <button class="btn btn--outline btn--sm" id="skip-onboarding">Skip Tutorial</button>
+          </div>
+          
+          <div class="onboarding-steps">
+            <!-- Step 1 -->
+            <div class="onboarding-step active" id="onboarding-step-1">
+              <div class="step-visual">
+                <div class="editor-preview">
+                  <div class="preview-sidebar"></div>
+                  <div class="preview-editor"></div>
+                  <div class="preview-properties"></div>
+                </div>
+              </div>
+              <div class="step-content">
+                <h2>Welcome to the Forest</h2>
+                <p>eZunder's three-panel editor gives you everything you need to write, organize, and format your book in one place.</p>
+                <div class="step-navigation">
+                  <span class="step-indicator">1 of 3</span>
+                  <button class="btn btn--primary next-step" data-step="2">Next: AI Features</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="onboarding-step" id="onboarding-step-2">
+              <div class="step-visual">
+                <div class="ai-preview">
+                  <div class="ai-suggestion"></div>
+                  <div class="ai-suggestion"></div>
+                  <div class="ai-analysis"></div>
+                </div>
+              </div>
+              <div class="step-content">
+                <h2>AI-Powered Insights</h2>
+                <p>Our AI analyzes your text to provide real-time suggestions for grammar, style, and typography to enhance your book's readability.</p>
+                <div class="step-navigation">
+                  <button class="btn btn--outline prev-step" data-step="1">Back</button>
+                  <span class="step-indicator">2 of 3</span>
+                  <button class="btn btn--primary next-step" data-step="3">Next: Export Options</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="onboarding-step" id="onboarding-step-3">
+              <div class="step-visual">
+                <div class="export-preview">
+                  <div class="format-option"></div>
+                  <div class="format-option"></div>
+                  <div class="format-option"></div>
+                </div>
+              </div>
+              <div class="step-content">
+                <h2>Publish Anywhere</h2>
+                <p>Export your book in multiple formats optimized for every platform, from Kindle to print, with just a few clicks.</p>
+                <div class="step-navigation">
+                  <button class="btn btn--outline prev-step" data-step="2">Back</button>
+                  <span class="step-indicator">3 of 3</span>
+                  <button class="btn btn--primary" id="complete-onboarding">Get Started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard Page -->
+      <section class="page dashboard-page hidden" id="dashboard-page">
+        <div class="dashboard-container">
+          <!-- Sidebar Navigation -->
+          <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+              <div class="logo">
+                <h2><span class="neon-text">e</span>Zunder</h2>
+              </div>
+              <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 17l5-5-5-5"></path>
+                  <path d="M6 17l5-5-5-5"></path>
+                </svg>
+              </button>
+            </div>
+            <nav class="sidebar-nav">
+              <ul>
+                <li class="active">
+                  <a href="#projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="#templates">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="3" y1="9" x2="21" y2="9"></line>
+                      <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    Templates
+                  </a>
+                </li>
+                <li>
+                  <a href="#library">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    Library
+                  </a>
+                </li>
+                <li>
+                  <a href="#settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    Settings
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="sidebar-footer">
+              <div class="user-info">
+                <div class="user-avatar">DU</div>
+                <div class="user-details">
+                  <p class="user-name">Demo User</p>
+                  <p class="user-plan">Premium</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Dashboard Content -->
+          <div class="dashboard-content">
+            <header class="dashboard-header">
+              <h1>My Projects</h1>
+              <div class="header-actions">
+                <button class="btn btn--primary" id="new-project-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  New Project
+                </button>
+                <button class="btn btn--secondary" id="import-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                  Import
+                </button>
+              </div>
+            </header>
+
+            <div class="dashboard-stats">
+              <div class="stat-card">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">250K</div>
+                <div class="stat-label">Words Written</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">Premium</div>
+                <div class="stat-label">Subscription</div>
+              </div>
+            </div>
+
+            <div class="recent-projects">
+              <h2>Recent Projects</h2>
+              <div class="projects-grid">
+                <div class="project-card" data-project-id="proj_1">
+                  <div class="project-cover">
+                    <div class="project-progress" style="--progress: 75%"></div>
+                    <div class="project-cover-content">
+                      <h3>The Digital Forest</h3>
+                      <p>by Sarah Chen</p>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <div class="project-meta">
+                      <span class="project-genre">Science Fiction</span>
+                      <span class="project-words">85,000 words</span>
+                    </div>
+                    <div class="project-date">Last edited: June 17, 2025</div>
+                    <div class="project-status">In Progress</div>
+                  </div>
+                </div>
+                <div class="project-card" data-project-id="proj_2">
+                  <div class="project-cover">
+                    <div class="project-progress" style="--progress: 90%"></div>
+                    <div class="project-cover-content">
+                      <h3>Mindful Coding</h3>
+                      <p>by Alex Rivera</p>
+                    </div>
+                  </div>
+                  <div class="project-info">
+                    <div class="project-meta">
+                      <span class="project-genre">Non-fiction</span>
+                      <span class="project-words">45,000 words</span>
+                    </div>
+                    <div class="project-date">Last edited: June 15, 2025</div>
+                    <div class="project-status">Review</div>
+                  </div>
+                </div>
+                <div class="project-card new-project">
+                  <div class="new-project-content">
+                    <div class="new-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                      </svg>
+                    </div>
+                    <p>Create New Project</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Editor Page -->
+      <section class="page editor-page hidden" id="editor-page">
+        <div class="editor-container">
+          <!-- Left Panel: Navigation -->
+          <div class="editor-panel editor-nav" id="editor-nav">
+            <div class="panel-header">
+              <h2>Chapters</h2>
+              <button class="btn btn--sm btn--outline" id="add-chapter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add
+              </button>
+            </div>
+            <div class="chapter-tree">
+              <ul id="chapter-list">
+                <li class="chapter-item active" data-chapter="1">
+                  <div class="chapter-handle">
+                    <span class="chapter-number">1</span>
+                    <span class="chapter-title">Introduction</span>
+                  </div>
+                </li>
+                <li class="chapter-item" data-chapter="2">
+                  <div class="chapter-handle">
+                    <span class="chapter-number">2</span>
+                    <span class="chapter-title">The Beginning</span>
+                  </div>
+                </li>
+                <li class="chapter-item" data-chapter="3">
+                  <div class="chapter-handle">
+                    <span class="chapter-number">3</span>
+                    <span class="chapter-title">The Journey</span>
+                  </div>
+                </li>
+                <li class="chapter-item" data-chapter="4">
+                  <div class="chapter-handle">
+                    <span class="chapter-number">4</span>
+                    <span class="chapter-title">The Challenge</span>
+                  </div>
+                </li>
+                <li class="chapter-item" data-chapter="5">
+                  <div class="chapter-handle">
+                    <span class="chapter-number">5</span>
+                    <span class="chapter-title">The Resolution</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn--sm btn--secondary" id="back-to-dashboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Dashboard
+              </button>
+            </div>
+          </div>
+          
+          <!-- Center Panel: Editor -->
+          <div class="editor-panel editor-main" id="editor-main">
+            <div class="panel-header">
+              <div class="editor-breadcrumb">
+                <span class="project-name">The Digital Forest</span>
+                <span class="separator">/</span>
+                <span class="chapter-name">Chapter 1: Introduction</span>
+              </div>
+              <div class="editor-actions">
+                <button class="btn btn--sm btn--outline editor-view-btn active" id="edit-view">Edit</button>
+                <button class="btn btn--sm btn--outline editor-view-btn" id="split-view">Split</button>
+                <button class="btn btn--sm btn--outline editor-view-btn" id="preview-view">Preview</button>
+                <button class="btn btn--sm btn--primary" id="save-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                    <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                    <polyline points="7 3 7 8 15 8"></polyline>
+                  </svg>
+                  Save
+                </button>
+              </div>
+            </div>
+            <div class="editor-content">
+              <div class="editor-canvas active" id="editor-canvas">
+                <div class="editor-toolbar">
+                  <button class="toolbar-btn" data-format="heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 12h12"></path>
+                      <path d="M6 20V4"></path>
+                      <path d="M18 20V4"></path>
+                    </svg>
+                  </button>
+                  <button class="toolbar-btn" data-format="bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
+                      <path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
+                    </svg>
+                  </button>
+                  <button class="toolbar-btn" data-format="italic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="19" y1="4" x2="10" y2="4"></line>
+                      <line x1="14" y1="20" x2="5" y2="20"></line>
+                      <line x1="15" y1="4" x2="9" y2="20"></line>
+                    </svg>
+                  </button>
+                  <button class="toolbar-btn" data-format="underline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"></path>
+                      <line x1="4" y1="21" x2="20" y2="21"></line>
+                    </svg>
+                  </button>
+                  <span class="toolbar-separator"></span>
+                  <button class="toolbar-btn" data-format="align-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="17" y1="10" x2="3" y2="10"></line>
+                      <line x1="21" y1="6" x2="3" y2="6"></line>
+                      <line x1="21" y1="14" x2="3" y2="14"></line>
+                      <line x1="17" y1="18" x2="3" y2="18"></line>
+                    </svg>
+                  </button>
+                  <button class="toolbar-btn" data-format="align-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="10" x2="6" y2="10"></line>
+                      <line x1="21" y1="6" x2="3" y2="6"></line>
+                      <line x1="21" y1="14" x2="3" y2="14"></line>
+                      <line x1="18" y1="18" x2="6" y2="18"></line>
+                    </svg>
+                  </button>
+                  <button class="toolbar-btn" data-format="align-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="21" y1="10" x2="7" y2="10"></line>
+                      <line x1="21" y1="6" x2="3" y2="6"></line>
+                      <line x1="21" y1="14" x2="3" y2="14"></line>
+                      <line x1="21" y1="18" x2="7" y2="18"></line>
+                    </svg>
+                  </button>
+                  <span class="toolbar-separator"></span>
+                  <button class="toolbar-btn" data-format="image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                  </button>
+                  <button class="toolbar-btn" data-format="quote">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 21c3.74-6.866 7.381-10.567 16-11v2c-5.782.555-9 3.855-10 9H3zm14 0c3.74-6.866 7.381-10.567 16-11v2c-5.782.555-9 3.855-10 9h-6z"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="editor-writing-area" contenteditable="true" id="writing-area">
+                  <h1>Chapter 1: Introduction</h1>
+                  <p>The forest stretched before her, a digital expanse of neon greens and deep blues that seemed to pulse with its own inner light. Sarah had never seen anything like it before, a virtual landscape so detailed and alive that she could almost feel the electric hum of the synthetic leaves.</p>
+                  <p>"Welcome to the Digital Forest," a voice whispered through her headset, the sound crisp and clear despite the ambient noise of birdsong and rustling foliage. "This is where your journey begins."</p>
+                  <p>Sarah Chen adjusted her haptic gloves, feeling the subtle resistance as her virtual fingers brushed against a fern. The technology was incredible – far beyond what she had expected when she signed up for the beta test. As lead developer at NeuroSync, she had seen her fair share of impressive simulations, but this... this was something else entirely.</p>
+                  <p>The mission seemed simple enough: navigate through the Digital Forest to find the ancient server, hidden somewhere within its depths. But as with any proper digital ecosystem, she knew appearances could be deceiving. What challenges awaited her in this phosphorescent wilderness? What creatures had the designers coded into existence?</p>
+                  <p>Only one way to find out.</p>
+                  <p>She took her first step forward, the ground beneath her feet responding with a subtle give that mimicked real soil. A trail of glowing particles rose in her wake, marking her path like digital breadcrumbs.</p>
+                  <p>"Let the adventure begin," she whispered to herself, excitement building as the forest came alive around her.</p>
+                </div>
+              </div>
+              <div class="editor-preview hidden" id="editor-preview"></div>
+              <div class="editor-split hidden" id="editor-split">
+                <div class="split-editor" contenteditable="true"></div>
+                <div class="split-preview"></div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="word-count">Words: 200</div>
+              <div class="ai-status">
+                <span class="status-icon"></span>
+                <span class="status-text">AI analysis complete</span>
+              </div>
+              <button class="btn btn--sm btn--outline" id="toggle-ai-panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                AI Suggestions
+              </button>
+            </div>
+          </div>
+          
+          <!-- Right Panel: Properties -->
+          <div class="editor-panel editor-properties" id="editor-properties">
+            <div class="panel-header">
+              <h2>Properties</h2>
+              <button class="panel-close" id="close-properties">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="properties-content">
+              <div class="property-section">
+                <h3 class="section-title">Typography</h3>
+                <div class="property-group">
+                  <label class="property-label">Heading Font</label>
+                  <select class="form-control property-select">
+                    <option>Inter SemiBold</option>
+                    <option>Inter Bold</option>
+                    <option>JetBrains Mono</option>
+                  </select>
+                </div>
+                <div class="property-group">
+                  <label class="property-label">Heading Size</label>
+                  <input type="range" class="property-range" min="18" max="36" value="28">
+                  <div class="range-value">28px</div>
+                </div>
+                <div class="property-group">
+                  <label class="property-label">Body Font</label>
+                  <select class="form-control property-select">
+                    <option>Inter Regular</option>
+                    <option>Inter Light</option>
+                    <option>JetBrains Mono</option>
+                  </select>
+                </div>
+                <div class="property-group">
+                  <label class="property-label">Body Size</label>
+                  <input type="range" class="property-range" min="12" max="24" value="16">
+                  <div class="range-value">16px</div>
+                </div>
+                <div class="property-group">
+                  <label class="property-label">Line Height</label>
+                  <input type="range" class="property-range" min="1" max="2" step="0.1" value="1.5">
+                  <div class="range-value">1.5</div>
+                </div>
+              </div>
+
+              <div class="property-section">
+                <h3 class="section-title">Chapter Settings</h3>
+                <div class="property-group">
+                  <label class="property-label">Chapter Title</label>
+                  <input type="text" class="form-control" value="Introduction">
+                </div>
+                <div class="property-group">
+                  <label class="property-label">Chapter Number</label>
+                  <input type="number" class="form-control" value="1" min="1">
+                </div>
+                <div class="property-group">
+                  <label class="checkbox-container">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                    Start on new page
+                  </label>
+                </div>
+                <div class="property-group">
+                  <label class="checkbox-container">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                    Include in TOC
+                  </label>
+                </div>
+              </div>
+              
+              <div class="property-section">
+                <h3 class="section-title">AI Recommendations</h3>
+                <div class="ai-recommendation">
+                  <div class="recommendation-header">
+                    <span class="recommendation-type">Typography</span>
+                    <span class="recommendation-score">95%</span>
+                  </div>
+                  <p class="recommendation-text">Based on your sci-fi genre, we recommend Inter SemiBold for headings and Inter Regular for body text, with a slightly increased line height for better readability.</p>
+                  <button class="btn btn--sm btn--outline btn--full-width apply-rec">Apply Recommendation</button>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn--sm btn--primary" id="export-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Export
+              </button>
+            </div>
+          </div>
+          
+          <!-- AI Suggestions Panel -->
+          <div class="ai-suggestions-panel hidden" id="ai-suggestions-panel">
+            <div class="panel-header">
+              <h2>AI Suggestions</h2>
+              <button class="panel-close" id="close-ai-panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="ai-suggestions-content">
+              <div class="ai-suggestion-card">
+                <div class="suggestion-type grammar">Grammar</div>
+                <p class="suggestion-text">Consider using active voice here: "The forest stretched before her..."</p>
+                <div class="suggestion-actions">
+                  <button class="btn btn--sm btn--outline">Ignore</button>
+                  <button class="btn btn--sm btn--primary">Apply</button>
+                </div>
+              </div>
+              <div class="ai-suggestion-card">
+                <div class="suggestion-type style">Style</div>
+                <p class="suggestion-text">This paragraph could benefit from shorter sentences to improve readability.</p>
+                <div class="suggestion-actions">
+                  <button class="btn btn--sm btn--outline">Ignore</button>
+                  <button class="btn btn--sm btn--primary">Rewrite</button>
+                </div>
+              </div>
+              <div class="ai-analysis-section">
+                <h3>Content Analysis</h3>
+                <div class="analysis-item">
+                  <div class="analysis-label">Genre Detection</div>
+                  <div class="analysis-value">Science Fiction (95% confidence)</div>
+                </div>
+                <div class="analysis-item">
+                  <div class="analysis-label">Reading Level</div>
+                  <div class="analysis-value">Grade 10-12</div>
+                </div>
+                <div class="analysis-item">
+                  <div class="analysis-label">Tone</div>
+                  <div class="analysis-value">Exploratory, Curious</div>
+                </div>
+                <div class="analysis-item">
+                  <div class="analysis-label">Pacing</div>
+                  <div class="analysis-value">Moderate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Export Page -->
+      <section class="page export-page hidden" id="export-page">
+        <div class="export-container">
+          <header class="export-header">
+            <button class="btn btn--sm btn--outline" id="back-to-editor">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Back to Editor
+            </button>
+            <h1>Export "The Digital Forest"</h1>
+          </header>
+          
+          <div class="export-content">
+            <div class="export-options">
+              <h2>Choose Format</h2>
+              <div class="format-cards">
+                <div class="format-card active">
+                  <div class="format-icon epub-icon"></div>
+                  <div class="format-info">
+                    <h3>EPUB 3.0</h3>
+                    <p>Standard eBook format for most readers</p>
+                  </div>
+                  <div class="format-selected"></div>
+                </div>
+                <div class="format-card">
+                  <div class="format-icon mobi-icon"></div>
+                  <div class="format-info">
+                    <h3>MOBI/KF8</h3>
+                    <p>Amazon Kindle format</p>
+                  </div>
+                  <div class="format-selected"></div>
+                </div>
+                <div class="format-card">
+                  <div class="format-icon pdf-icon"></div>
+                  <div class="format-info">
+                    <h3>PDF Print</h3>
+                    <p>Print-ready PDF with professional layout</p>
+                  </div>
+                  <div class="format-selected"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="export-settings">
+              <h2>Export Settings</h2>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label class="form-label">Book Title</label>
+                  <input type="text" class="form-control" value="The Digital Forest">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Author</label>
+                  <input type="text" class="form-control" value="Sarah Chen">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Cover Image</label>
+                  <div class="cover-preview">
+                    <div class="cover-image">
+                      <div class="placeholder-cover">
+                        <h3>The Digital Forest</h3>
+                        <p>by Sarah Chen</p>
+                      </div>
+                    </div>
+                    <button class="btn btn--sm btn--outline">Change Cover</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Table of Contents</label>
+                  <label class="checkbox-container">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                    Include table of contents
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="quality-checks">
+              <h2>Quality Checks</h2>
+              <div class="checks-list">
+                <div class="check-item success">
+                  <span class="check-icon"></span>
+                  <span class="check-text">No grammar issues detected</span>
+                </div>
+                <div class="check-item success">
+                  <span class="check-icon"></span>
+                  <span class="check-text">All chapters included</span>
+                </div>
+                <div class="check-item success">
+                  <span class="check-icon"></span>
+                  <span class="check-text">Metadata complete</span>
+                </div>
+                <div class="check-item warning">
+                  <span class="check-icon"></span>
+                  <span class="check-text">Cover image resolution could be improved</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="export-actions">
+            <button class="btn btn--secondary">Preview</button>
+            <button class="btn btn--primary glow-effect">
+              <span class="btn-text">Export Now</span>
+              <span class="ember-particles"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal hidden" id="new-project-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create New Project</h2>
+          <button class="modal-close" aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="new-project-form">
+            <div class="form-group">
+              <label for="project-title" class="form-label">Book Title</label>
+              <input type="text" id="project-title" class="form-control" placeholder="Enter your book title" required>
+            </div>
+            <div class="form-group">
+              <label for="project-author" class="form-label">Author</label>
+              <input type="text" id="project-author" class="form-control" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="project-genre" class="form-label">Genre</label>
+              <select id="project-genre" class="form-control">
+                <option value="">Select a genre</option>
+                <option value="fiction">Fiction</option>
+                <option value="scifi">Science Fiction</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="nonfiction">Non-Fiction</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Template</label>
+              <div class="template-options">
+                <label class="template-option">
+                  <input type="radio" name="template" value="blank" checked>
+                  <div class="template-card">
+                    <div class="template-icon blank-icon"></div>
+                    <div class="template-name">Blank</div>
+                  </div>
+                </label>
+                <label class="template-option">
+                  <input type="radio" name="template" value="novel">
+                  <div class="template-card">
+                    <div class="template-icon novel-icon"></div>
+                    <div class="template-name">Novel</div>
+                  </div>
+                </label>
+                <label class="template-option">
+                  <input type="radio" name="template" value="nonfiction">
+                  <div class="template-card">
+                    <div class="template-icon nonfiction-icon"></div>
+                    <div class="template-name">Non-Fiction</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn--secondary modal-cancel">Cancel</button>
+          <button class="btn btn--primary" id="create-project-btn">Create Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
